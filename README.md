@@ -7,7 +7,7 @@
 ### ESP篇
 |编号|标题|简介|
 |:---|:---|:---|
-|P1|[P1-ESP32的IIC协议OLED屏幕使用教程](./ESP/P1-ESP32的IIC协议OLED屏幕使用教程.md)|记述了如何给IIC协议的OLED接线、以及如何让其显示文字|
+|P1|[P1-ESP32的IIC协议OLED屏幕使用教程](./ESP/P1-ESP32的IIC协议OLED屏幕使用教程/P1-ESP32的IIC协议OLED屏幕使用教程.md)|记述了如何给IIC协议的OLED接线、以及如何让其显示文字|
 
 ## 许可证
 本仓库的所有内容均采用[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)许可证
