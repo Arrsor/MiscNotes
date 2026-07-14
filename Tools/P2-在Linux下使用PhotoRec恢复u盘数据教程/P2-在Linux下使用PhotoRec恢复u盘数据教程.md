@@ -80,7 +80,7 @@ EOF
 ```bash
 sudo dd if=/dev/sdX of=/home/你的用户名/u盘备份.img bs=4M status=progress
 ```
-这个命令中，"of="(**O**utput **F**ile,输出文件)后面可以改成其他路径(在/home分区不够大时),这是生成备份的位置，注意最后要写上文件名.img。"if="(**I**nput **F**ile，输入文件)后面的路径是磁盘位置
+这个命令中，"of="(**O**utput **F**ile,输出文件)后面可以改成其他路径(在/home分区不够大时),这是生成备份的位置，注意最后要写上文件名.img。"if="(**I**nput **F**ile，输入文件)后面的路径是被备份磁盘的位置
 
 ### 二、安装软件
 要安装一个叫TestDisk的软件，安装并不复杂
