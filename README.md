@@ -10,6 +10,11 @@
 |:---|:---|:---|
 |P1|[P1-ESP32的IIC协议OLED屏幕使用教程](./ESP/P1-ESP32的IIC协议OLED屏幕使用教程/P1-ESP32的IIC协议OLED屏幕使用教程.md)|记述了如何给IIC协议的OLED接线、以及如何让其显示文字|
 
+##工具篇
+|编号|标题|简介|
+|:---|:---|:---|
+|P2|[P2-在Linux下使用PhotoRec恢复u盘数据教程](./Tools/P2-在Linux下使用PhotoRec恢复u盘数据教程/P2-在Linux下使用PhotoRec恢复u盘数据教程.md)|教会你如何在U盘文件被误删时在Linux下用PhotoRec尝试恢复文件|
+
 ## 许可证
 本仓库的所有内容均采用[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)许可证
 你可以自由使用、修改、分享这些内容，但要注明原作者，若修改后再次发布，也需要使用相同的许可证
