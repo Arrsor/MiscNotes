@@ -13,6 +13,8 @@ lsblk -f
 
 ![lsblk -f输出结果示例图](./img_lsblk-f_res.png)
 
+然后输入以下命令
+
 ```bash
 sync
 sudo umount /dev/sdX
@@ -72,17 +74,22 @@ EOF
 输入*lsblk -f*找到U盘位置后，输入*sudo umount /dev/sdX*
 
 (选做，但做了更保险)
-我们可以选择去做一个U盘备份，前提是，你要确定你的磁盘空间(或/home分区大小)要大于U盘的存储空间，这个备份要在**没有挂载**时
+我们可以选择去做一个U盘备份，前提是，你要确定你的磁盘空间(或/home分区大小)要大于U盘的存储空间，这个备份要在**没有挂载**时做
 ```bash
 sudo dd if=/dev/sdX of=/home/你的用户名/u盘备份.img bs=4M status=progress
 ```
-这个命令中，"of="后面可以改成其他路径(在/home分区不够大时)
+这个命令中，"of="(**O**utput **F**ile,输出文件)后面可以改成其他路径(在/home分区不够大时),这是生成备份的位置，注意最后要写上文件名.img。"if="(**I**nput **F**ile，输入文件)后面的路径是磁盘位置
 
 ### 二、安装软件
 要安装一个叫TestDisk的软件，安装并不复杂
 先刷新一下
 ```bash
-sudo apt update
+sudo apt update #适用于Debian/Ubuntu/Mint
+sudo dnf check-update #适用于Fedora/RHEL/CentOS
+sudo pacman -Syy #适用于Arch Linux/Manjaro
+sudo apk update #适用于Alpine Linux
+sudo emerge --sync #适用于Gentoo Linux
+sudo zypper refresh #适用于openSUSE
 ```
 安装软件本体，根据系统，选择命令
 ```bash
@@ -127,7 +134,7 @@ sudo photorec /dev/sdX
 ![PhotoRec文件格式选择界面](./img_PhotoRec_2_1.png)
 
 >说明：
->- 通过↑和↓键来选择你需要的格式，按空格键勾选(当勾选时，最右边是[X])选或取消勾选()你需要的格式
+>- 通过↑和↓键来选择你需要的格式，按空格键勾选{当勾选时，最右边是[X],取消勾选时，最右边是[])你需要的格式
 >- 如果需要全选或全不选，就按s(注意小写)
 
 当选择完成后，按b来确认这些设置后，你会看到以 下界面(图:OK确认界面)
@@ -139,6 +146,8 @@ sudo photorec /dev/sdX
 之后你会看到这个页面(图:PhotoRec第三屏幕)
 ![PhotoRec第三屏幕](./img_PhotoRec_3.png)
 这里要选择U盘的文件系统类型，如果刚才在*lsblk -f*或记得自己的U盘文件系统类型是ext2/ext3/ext4的话，选择[ ext2/ext3 ]后按Enter键，如果不是，选择[ Other    ]后按Enter键
+
+>如果你不知道U盘文件类型，在PhotoRec第三屏幕选择文件系统类型时，可以先选[ Other ]，绝大多数U盘都是要选这个选项，如果恢复的文件大量是损坏的，就选择[ ext2/ext3 ]，不用担心选错，PhotoRec恢复时是不会向U盘里传输文件的，PhotoRec只读U盘
 
 完成后，你会看到这个界面(图:PhotoRec第四屏幕)
 ![PhotoRec第四屏幕](./img_PhotoRec_4.png)
